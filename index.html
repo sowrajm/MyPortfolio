@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sowraj M</title>
+    <link rel = "stylesheet" href = "style.css"> 
+</head>
+<body>
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Achievements</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Contact</a></li>
+               </ul> 
+            </nav>
+        <div class = "header-text">
+                <h1>SOWRAJ M</h1>
+                <H2>I am a <span>FRONT-END DEVELOPER<br></span> with an  interest in <span> ML</span>.</H2>
+        </div>
+        </div>
+    </div>
+<!-- -----------------------about ------------------ -->
+<div id = "about">
+    <div class = "container">
+        <div class = "row">
+        <div class="about-1">
+            <img src="images/user.jpg">
+        </div>
+        <div class="about-2">
+            <h1 class="sub-title">ABOUT ME</h1>
+            <p class = "paragraph">
+                I am a skilled front-end developer with a passion for creating captivating user interfaces. Alongside my expertise in web development, I also possess a keen interest in machine learning, constantly seeking opportunities to explore its applications. I strive to combine my technical proficiency with innovative thinking to deliver visually appealing and interactive experiences. With a focus on clean code and attention to detail, I aim to create seamless and user-friendly digital solutions. Overall, I am an enthusiastic professional dedicated to pushing the boundaries of web development and exploring the exciting realm of machine learning
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">SKILLS</p>
+                <p class="tab-links " onclick="opentab('experience')">EXPERIENCE</p>
+                <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>Mongo db</span> -- intermediate</li>
+                    <li><span>Node js</span> -- intermediate</li>
+                    <li><span>react js</span> -- basic</li>
+                    <li><span>Python</span> -- intermediate</li>
+                    <li><span>django</span> -- basic</li>
+                    <li><span>machine learning</span> -- basic</li>
+
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>INTERN</span> <br> MERN stack</li>
+                 
+
+                </ul>
+            </div> 
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>UG</span> <br> SECE</li>
+                 
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div> 
+</div>
+ 
+<!-- ------------------------ MY PROJECTS ------------------------------ -->
+
+<div class="projects">
+    <div class="container">
+        <h1 class="sub-title">MY PROJECTS</h1>
+        <div class="projet-list">
+            <div>
+                <h2>Contest Ranking Generator</h2>
+                <p>
+                    generate ranking of leetcode codechef by taking links as input
+                </p>
+                <a href="#">view project</a>
+            </div>
+            <div>
+                <h2>Car rental Website</h2>
+                <p>
+                    design for renting car , developed using mern stack
+                </p>
+                <a href="#">view project</a>
+            </div>
+            <div>
+                <h2>sooon</h2>
+                <p>
+                    comming sooooon
+                </p>
+                <a href="#">view project</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links"); 
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add('active-tab')
+    }
+</script>
+
+</body>
+</html>
+
